@@ -1,0 +1,14 @@
+.header-with-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/headercme.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+}
+
+/* Vous pourriez avoir besoin d'ajuster le style du badge si le fond est clair */
+.header-with-bg .badge {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid white;
+}

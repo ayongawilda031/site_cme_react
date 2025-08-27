@@ -1,0 +1,13 @@
+.process-header-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/headercme.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative; 
+}
+
+.process-container{
+  margin-top: 50px;
+}
