@@ -1,5 +1,5 @@
-.services-header-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/headercme.jpg');
+.news-header-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/assets/img/headercme.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -8,6 +8,6 @@
   position: relative; 
 }
 
-.services-container{
+.news-container{
   margin-top: 50px;
 }

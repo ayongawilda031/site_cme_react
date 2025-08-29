@@ -5,6 +5,7 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import '../styles/Contact.css'
 
 
 export default function ContactSection() {
@@ -15,7 +16,7 @@ export default function ContactSection() {
         <div className="contact-container">
           <div className="row mb-4">
             <div className="col-md-8 col-xl-5 mx-auto">
-              <h1 className="fw-bold mb-3 heading">Contact us</h1>
+              <h1 className="fw-bold mb-3">Contact us</h1>
               <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
             </div>
           </div>

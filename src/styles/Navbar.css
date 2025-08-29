@@ -1,7 +1,5 @@
 
 .noellie-navbar {
-  max-width: 1150px;
-  background-color: #ffffff !important;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -27,6 +25,7 @@
   padding: 0.5rem 1rem !important;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  margin-right: 0.5rem !important;
 }
 
 
@@ -51,6 +50,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-right: 2rem !important;
 }
 
 .noellie-phone-btn svg {

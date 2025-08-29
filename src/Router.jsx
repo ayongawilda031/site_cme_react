@@ -16,7 +16,7 @@ export default function Router() {
           <Route path="/" element={<HomePage />} /> 
           <Route path="/aboutus" element={<AboutUsPage />} /> 
           <Route path="/services" element={<ServicesPage />} /> 
-          <Route path="/process" element={<ProcessPage />} />
+          <Route path="/expertises" element={<ProcessPage />} />
           <Route path="/news" element={<NewsPage />} />  
           <Route path="/contact" element={<ContactPage />} /> 
         </Routes>

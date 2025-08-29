@@ -1,15 +1,18 @@
 import NavBar from '../Components/NavBar';
 import Footer from '../Components/Footer';      
-import AboutUsSection from '../Components/AboutUsSection';
+import AboutUs from '../Components/AboutUs';
+import CabinetSection from '../Components/CabinetSection';
 
 
 
-export default function AboutUs() {
+export default function AboutUsPage() {
   return (
     <>
       <NavBar />
-      <AboutUsSection />
+      <AboutUs />
+      <CabinetSection />
       <Footer />
+      
      
     </>
   );

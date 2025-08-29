@@ -1,0 +1,110 @@
+.process-header-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/assets/img/headercme.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative; 
+}
+
+.process-container{
+  margin-top: 50px;
+}
+
+
+
+.expertise-card {
+  position: relative;
+  background-color: var(--bs-body-tertiary);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.expertise-step-circle {
+  position: absolute;
+  left: 20px;
+  top: 130px;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ffc107;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.expertise-card:hover .expertise-step-circle {
+   
+    opacity: 0;
+}
+
+.expertise-step-circle svg {
+    color: black;
+}
+
+.expertise-card .card-body {
+  padding-top: 30px !important;
+  text-align: left;
+  flex-grow: 1;
+}
+
+
+.view-all-btn {
+  
+  padding: 10px 30px;
+  border-radius: 50px;
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .expertise-img {
+    height: 120px;
+  }
+  .expertise-step-circle {
+    top: 110px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+.gx-1 {
+    --bs-gutter-x: 0.25rem; 
+}
+
+
+.gy-1 {
+    --bs-gutter-y: 0.25rem;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+

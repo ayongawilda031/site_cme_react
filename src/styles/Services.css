@@ -1,0 +1,100 @@
+.service-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  color: var(--bs-primary);
+  border: 2px solid var(--bs-primary);
+  border-radius: 50%;
+  
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 1.5rem;
+}
+
+.service-icon {
+  font-size: 1.5rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 70%;
+}
+
+.service-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 0.75rem;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.service-card-link {
+  color: inherit;
+}
+
+.service-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-title {
+  color: var(--bs-primary);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover {
+  color: var(--bs-warning);
+}
+
+.service-card .card-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-card .card-body p {
+  text-align: justify;
+  color: var(--bs-body-color);
+}
+
+.services-header-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/assets/img/headercme.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative; 
+}
+
+.services-container {
+  margin-top: 50px;
+}
+
+.view-all-btn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+.heading {
+  color: var(--bs-primary);
+  position: relative;
+  padding-bottom: 15px;
+}
+
