@@ -1,28 +1,28 @@
-import { FaArrowRight, FaChartLine, FaShieldAlt, FaPencilRuler, FaLaptopCode, FaTags, FaVideo } from 'react-icons/fa';
+import { FaArrowRight, FaShieldAlt, FaBalanceScale, FaGavel, FaFileContract, FaHandshake, FaChalkboardTeacher } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../styles/Services.css';
 
 export const services = [
   {
-    icon: <FaPencilRuler className="service-icon" />,
+    icon: <FaBalanceScale className="service-icon" />,
     title: 'Conseil Juridique',
     description: 'Expertise approfondie pour vous guider dans toutes vos démarches juridiques, qu\'elles soient préventives ou contentieuses.',
     link: '/services/conseil-juridique'
   },
   {
-    icon: <FaLaptopCode className="service-icon" />,
+    icon: <FaGavel className="service-icon" />,
     title: 'Représentation Légale',
     description: 'Défense de vos intérêts devant les tribunaux et les instances administratives, avec une stratégie adaptée à chaque situation.',
     link: '/services/representation-legale'
   },
   {
-    icon: <FaTags className="service-icon" />,
+    icon: <FaFileContract className="service-icon" />,
     title: 'Rédaction d\'Actes',
     description: 'Assistance pour la rédaction de contrats, statuts, lettres officielles et autres documents juridiques essentiels à vos activités.',
     link: '/services/redaction-actes'
   },
   {
-    icon: <FaVideo className="service-icon" />,
+    icon: <FaHandshake className="service-icon" />,
     title: 'Médiation et Arbitrage',
     description: 'Accompagnement dans la résolution amiable des litiges, offrant des solutions efficaces et discrètes pour éviter les procédures judiciaires.',
     link: '/services/mediation-arbitrage'
@@ -34,7 +34,7 @@ export const services = [
     link: '/services/audit-conformite'
   },
   {
-    icon: <FaChartLine className="service-icon" />,
+    icon: <FaChalkboardTeacher className="service-icon" />,
     title: 'Formation et Séminaires',
     description: 'Organisation de sessions de formation personnalisées sur des thématiques juridiques spécifiques pour vous et vos équipes.',
     link: '/services/formation-seminaires'
@@ -43,7 +43,7 @@ export const services = [
 
 export default function OurServices({ showHeader = true, servicesList = services, isHomePage = false }) {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5 bg-light ">
       <div className="container text-center">
         {showHeader && (
           <div className="row mb-4">

@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa6';
-import { FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -25,8 +22,6 @@ export default function Footer() {
             <h5 className="fw-bold">Heures d'ouverture</h5>
             <ul className="list-unstyled mt-3 mb-4">
               <li>Lundi - Vendredi : 08h00 - 18h00</li>
-              <li>Samedi : 09h00 - 13h00</li>
-              <li>Dimanche : Fermé</li>
             </ul>
 
             <h5 className="fw-bold">Adresse</h5>
@@ -44,13 +39,6 @@ export default function Footer() {
               <li><Link className="link-light text-decoration-none" to="/privacy">Politique de Confidentialité</Link></li>
               <li><Link className="link-light text-decoration-none" to="/terms">Conditions Générales</Link></li>
             </ul>
-
-            <h5 className="fw-bold">Suivez-nous</h5>
-            <div className="fs-4 d-flex justify-content-center align-items-center gap-2 justify-content-lg-end mb-lg-2">
-              <Link className="link-light" to="#"><FaFacebook /></Link>
-              <Link className="link-light" to="#"><FaTwitter /></Link>
-              <Link className="link-light" to="#"><FaLinkedin /></Link>
-            </div>
           </div>
         </div>
         

@@ -1,52 +1,58 @@
+import { useState } from "react";
+
 export default function FAQSection() {
+  const [activeIndex, setActiveIndex] = useState(-1);
+
+  const faqItems = [
+    {
+      question: "Quels sont les domaines de droit dans lesquels vous intervenez ?",
+      answer: "Notre cabinet intervient dans tous les domaines du droit : droit des affaires, droit civil, droit pénal, droit immobilier, droit de la famille, et bien d'autres."
+    },
+    {
+      question: "Comment prendre rendez-vous avec un avocat ?",
+      answer: "Vous pouvez nous contacter par téléphone, email ou via le formulaire de contact sur notre site. Nous vous répondrons dans les plus brefs délais."
+    },
+    {
+      question: "Quels sont vos honoraires ?",
+      answer: "Nos honoraires varient selon la complexité du dossier et le temps nécessaire. Nous proposons une première consultation gratuite pour évaluer votre situation."
+    },
+
+  ];
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? -1 : index);
+  };
+
   return (
-    <section>
-      <div className="container py-4">
+    <section className="faq-section bg-white">
+      <div className="container py-5">
         <div className="row mb-4">
           <div className="col-md-8 col-xl-5 text-center mx-auto">
-            <h3 className="display-6 text-uppercase fw-bold">FAQ</h3>
-            <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
+            <h3 className="display-6 fw-bold">Foire aux questions</h3>
+            <p>Retrouvez les réponses aux questions les plus fréquentes.</p>
           </div>
         </div>
         <div className="row">
-          <div className="col col-md-10 col-lg-7 mx-auto">
-            <div className="accordion" role="tablist" id="accordion-1">
-              <div className="accordion-item">
-                <h2 className="accordion-header" role="tab">
-                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true" aria-controls="accordion-1 .item-1">
-                    Aenean arcu euismod aliquam, volutpat consequat?
-                  </button>
-                </h2>
-                <div className="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-1">
-                  <div className="accordion-body">
-                    <p className="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+          <div className="col col-md-10 col-lg-8 mx-auto">
+            <div className="accordion" id="faqAccordion">
+              {faqItems.map((item, index) => (
+                <div className="accordion-item" key={index}>
+                  <h2 className="accordion-header">
+                    <button 
+                      className={`accordion-button ${activeIndex === index ? '' : 'collapsed'}`}
+                      type="button"
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      {item.question}
+                    </button>
+                  </h2>
+                  <div className={`accordion-collapse collapse ${activeIndex === index ? 'show' : ''}`}>
+                    <div className="accordion-body">
+                      <p className="mb-0">{item.answer}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" role="tab">
-                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">
-                    Lorem quam erat placerat mollis, rhoncus senectus?
-                  </button>
-                </h2>
-                <div className="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
-                  <div className="accordion-body">
-                    <p className="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" role="tab">
-                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">
-                    Iaculis accumsan id, facilisis proin ipsum velit neque?
-                  </button>
-                </h2>
-                <div className="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
-                  <div className="accordion-body">
-                    <p className="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -54,4 +60,3 @@ export default function FAQSection() {
     </section>
   );
 }
-

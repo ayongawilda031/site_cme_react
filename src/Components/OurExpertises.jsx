@@ -1,5 +1,12 @@
 import { FaArrowRight } from 'react-icons/fa';
-import { VscLaw } from "react-icons/vsc";
+import { 
+  FaBuilding, 
+  FaGavel, 
+  FaUserTie, 
+  FaMoneyBillWave, 
+  FaBalanceScale, 
+  FaShieldAlt 
+} from 'react-icons/fa';
 import { Link } from 'react-router-dom'; 
 import '../styles/Expertises.css'
 
@@ -8,31 +15,43 @@ export const expertises = [
     image: '/assets/img/headercme.jpg', 
     title: 'Droit Public et Institutions',
     description: "Nous traitons également l'ensemble des questions de Droit Public générale, tant pour les entités de Droit public que pour les Entités de Droit Privé ayant des intérêts publics.",
+    icon: <FaBuilding size={35} />,
+    link: '/expertises/droit-public-institutions'
   },
   {
     image: '/assets/img/headercme.jpg', 
     title: 'Droit Pénal des Affaires',
     description: 'Défense et conseil en matière de litiges pénaux liés aux activités commerciales et financières.',
+    icon: <FaGavel size={35} />,
+    link: '/expertises/droit-penal-affaires'
   },
   {
     image: '/assets/img/headercme.jpg',
     title: 'Droit du Travail et Social',
     description: 'Accompagnement dans la gestion des relations de travail, des litiges individuels et collectifs.',
+    icon: <FaUserTie size={35} />,
+    link: '/expertises/droit-travail-social'
   },
   {
     image: '/assets/img/headercme.jpg',
     title: 'Droit Fiscal et Douanier',
     description: 'Optimisation fiscale et résolution des contentieux avec les administrations fiscales et douanières.',
+    icon: <FaMoneyBillWave size={35} />,
+    link: '/expertises/droit-fiscal-douanier'
   },
   {
     image: '/assets/img/headercme.jpg',
     title: 'Droit des Sociétés et Commercial',
     description: 'Création et gestion de sociétés, fusions-acquisitions et conseil en opérations commerciales.',
+    icon: <FaBalanceScale size={35} />,
+    link: '/expertises/droit-societes-commercial'
   },
   {
     image: '/assets/img/headercme.jpg',
     title: 'Droit des Assurances',
     description: "Assistance dans la gestion des sinistres et des litiges relatifs aux contrats d'assurance.",
+    icon: <FaShieldAlt size={35} />,
+    link: '/expertises/droit-assurances'
   },
 ];
 
@@ -52,17 +71,23 @@ export default function OurExpertises({ isHomePage = false }) {
             <div className="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3 mx-auto">
               {expertises.map((expertise, index) => (
                 <div key={index} className="col">
-                  <div className="card expertise-card border-0" data-bs-theme="light">
-                    <img src={expertise.image} className="card-img-top expertise-img" alt={expertise.title} />
-                    <div className="text-white rounded-circle d-flex justify-content-center align-items-center expertise-step-circle">
-                      <VscLaw size={35} />
+                  <Link to={expertise.link} className="text-decoration-none">
+                    <div className="card expertise-card border-0" data-bs-theme="light">
+                      <img src={expertise.image} className="card-img-top expertise-img" alt={expertise.title} />
+                      <div className="text-white rounded-circle d-flex justify-content-center align-items-center expertise-step-circle">
+                        {expertise.icon}
+                      </div>
+                      <div className="card-body text-center text-sm-start p-4 position-relative">
+                        <h5 className="fw-bold text-dark">{expertise.title}</h5>
+                        <p className="text-muted mb-0 text-justify">{expertise.description}</p>
+                        
+                        
+                        <div className="position-absolute start-0 bottom-1 mb-3 ms-3">
+                          <FaArrowRight className="text-primary" />
+                        </div>
+                      </div>
                     </div>
-                    <div className="card-body text-center text-sm-start p-4">
-                      <h5 className="fw-bold">{expertise.title}</h5>
-                    
-                      <p className="text-muted mb-0 text-justify">{expertise.description}</p>
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>

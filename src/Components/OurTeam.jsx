@@ -1,15 +1,15 @@
 export default function OurTeam() {
   const teamMembers = [
-    { id: 1, name: "Marie Dupont", position: "Avocat Associé", image: "/assets/img/team/avatar4.jpg" },
-    { id: 2, name: "Pierre Martin", position: "Expert Juridique", image: "/assets/img/team/avatar6.jpg" },
-    { id: 3, name: "Sophie Lambert", position: "Spécialiste Fiscal", image: "/assets/img/team/avatar5.jpg" },
-    { id: 4, name: "Thomas Bernard", position: "Consultant Corporate", image: "/assets/img/team/avatar3.jpg" },
-    { id: 5, name: "Julie Petit", position: "Avocat Senior", image: "/assets/img/team/avatar1.jpg" },
-    { id: 6, name: "Michel Durand", position: "Directeur Juridique", image: "/assets/img/team/avatar2.jpg" }
+    { id: 1, name: "ayonga wilda", position: "Avocat Associé", image: "/assets/img/team/avatar4.jpg" },
+    { id: 2, name: "ayonga wilda", position: "Expert Juridique", image: "/assets/img/team/avatar6.jpg" },
+    { id: 3, name: "ayonga wilda", position: "Spécialiste Fiscal", image: "/assets/img/team/avatar5.jpg" },
+    { id: 4, name: "ayonga wilda", position: "Consultant Corporate", image: "/assets/img/team/avatar3.jpg" },
+    { id: 5, name: "ayonga wilda", position: "Avocat Senior", image: "/assets/img/team/avatar1.jpg" },
+    { id: 6, name: "ayonga wilda", position: "Directeur Juridique", image: "/assets/img/team/avatar2.jpg" }
   ];
 
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5">
       <div className="container py-5">
         <div className="row mb-5">
           <div className="col-lg-8 col-xl-6 text-center mx-auto">
