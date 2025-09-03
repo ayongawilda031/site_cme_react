@@ -1,16 +1,62 @@
-import { FaArrowRight } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import '../styles/LatestPost.css'
 
 export const newsPostsData = [
-    { id: 1, title: "Reimagining Digital Design", description: "Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.", date: "Jan 12, 2025", image: '/assets/img/projects/project1.webp' },
-    { id: 2, title: "Another Design Perspective", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", date: "Feb 1, 2025", image: '/assets/img/projects/project2.webp' },
-    { id: 3, title: "The Future of Branding", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", date: "Mar 10, 2025", image: '/assets/img/projects/Designer.jpeg' },
-    { id: 4, title: "Innovation in UX", description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", date: "Apr 5, 2025", image: '/assets/img/projects/project1.webp' },
-    { id: 5, title: "Digital Marketing Trends", description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", date: "May 20, 2025", image: '/assets/img/projects/project2.webp' },
-    { id: 6, title: "Creative Agency Insights", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.", date: "Jun 1, 2025", image: '/assets/img/projects/Designer.jpeg' },
-    { id: 7, title: "Visual Storytelling", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.", date: "Jul 15, 2025", image: '/assets/img/projects/project1.webp' },
-    { id: 8, title: "Web Development Best Practices", description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.", date: "Aug 1, 2025", image: '/assets/img/projects/project2.webp' },
+  { 
+    id: 1, 
+    title: "Réforme du droit des sociétés : ce qui change en 2025", 
+    description: "Découvrez les nouvelles dispositions légales qui impactent la gouvernance d'entreprise et les obligations des dirigeants.", 
+    date: "12 Jan 2025", 
+    readTime: "5 min",
+    category: "Droit des Sociétés",
+    image: "/assets/img/droit_société.jpg"
+  },
+  { 
+    id: 2, 
+    title: "Nouvelle jurisprudence en droit fiscal international", 
+    description: "Analyse des dernières décisions qui redéfinissent les obligations fiscales des entreprises multinationales.", 
+    date: "1 Fév 2025", 
+    readTime: "7 min",
+    category: "Droit Fiscal",
+    image: "/assets/img/droit_penal.jpg"
+  },
+  { 
+    id: 3, 
+    title: "Protection des données : mise à jour du cadre réglementaire", 
+    description: "Les nouvelles exigences RGPD et leurs implications pour les entreprises gabonaises.", 
+    date: "10 Mar 2025", 
+    readTime: "4 min",
+    category: "Conformité",
+    image: "/assets/img/droit_penal.jpg"
+  },
+  { 
+    id: 4, 
+    title: "Droit du travail : évolutions récentes", 
+    description: "Point sur les modifications législatives affectant les relations employeur-employé.", 
+    date: "5 Avr 2025", 
+    readTime: "6 min",
+    category: "Droit du Travail",
+    image: "/assets/img/droit_travail.jpg"
+  },
+  { 
+    id: 5, 
+    title: "Innovation juridique et transformation digitale", 
+    description: "Comment les nouvelles technologies transforment la pratique du droit et les services aux clients.", 
+    date: "20 Mai 2025", 
+    readTime: "8 min",
+    category: "Innovation",
+    image: "/assets/img/droit_penal.jpg"
+  },
+  { 
+    id: 6, 
+    title: "Contentieux commercial : tendances et best practices", 
+    description: "Retour d'expérience sur les dossiers récents et stratégies gagnantes en litiges commerciaux.", 
+    date: "1 Juin 2025", 
+    readTime: "5 min",
+    category: "Contentieux",
+    image: "/assets/img/droit_penal.jpg"
+  }
 ];
 
 export default function LatestPosts({ isHomePage = false }) {
@@ -23,36 +69,65 @@ export default function LatestPosts({ isHomePage = false }) {
         {isHomePage && (
           <div className="row mb-4 mb-lg-5">
             <div className="col-md-8 col-xl-5 text-center mb-4 mx-auto">
-              <small className="text-uppercase">Actualité</small>
+              <small className="text-uppercase text-primary fw-bold">Actualité</small>
               <h3 className="fs-2 fw-bold mb-4 heading">Dernières publications</h3>
             </div>
           </div>
         )}
-        <div className="row gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
+        
+        <div className="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
           {displayedPosts.map((post) => (
-            <div key={post.id} className="post-tag-unknown">
-              <div className="card border-0">
-                <Link className="position-relative" to={`/news/article-${post.id}`}>
-                  <img className="rounded img-fluid aspect-ratio-4x3 object-fit-cover w-100 card-img-top" alt={post.title} width="1024" height="1024" src={post.image} />
-                  <span className="badge bg-dark bg-opacity-75 rounded-pill position-absolute p-2 me-3 mb-3 px-3 bottom-0 end-0">
-                    <time dateTime={post.date}>{post.date}</time>
-                  </span>
-                </Link>
-                <div className="card-body">
-                  <Link to={`/news/article-${post.id}`}>
-                    <h4 className="fs-5 fw-semibold text-body">{post.title}</h4>
-                  </Link>
-                  <p className="card-text">{post.description}</p>
+            <div key={post.id} className="col">
+              <Link 
+                to={`/news/${post.id}`} 
+                className="text-decoration-none post-card-link"
+              >
+                <div className="card border-0 h-100 shadow-sm post-card">
+                  {/* Image */}
+                  <div className="post-image-container">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="card-img-top post-image"
+                    />
+                    <div className="category-badge">
+                      <span className="badge bg-primary">{post.category}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="card-body p-4">
+                    {/* Titre */}
+                    <h4 className="fs-5 fw-semibold text-dark mb-3 post-title">
+                      {post.title}
+                    </h4>
+                    
+                    {/* Description */}
+                    <p className="card-text text-muted mb-4 post-description">
+                      {post.description}
+                    </p>
+                    
+                    {/* Métadonnées */}
+                    <div className="d-flex justify-content-between align-items-center text-muted small post-meta">
+                      <div className="d-flex align-items-center">
+                        <FaCalendarAlt className="me-2" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="d-flex align-items-center">
+                        <FaClock className="me-2" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
+        
         {isHomePage && (
-          <div className="mt-4 text-center">
-            <Link to="/news" className="btn btn-warning px-4 py-2 fw-semibold  align-items-center justify-content-center mx-auto">
-              Voir tout&nbsp;
-                <FaArrowRight />
+          <div className="mt-5 text-center">
+            <Link to="/news" className="btn btn-warning px-4 py-2 fw-semibold align-items-center justify-content-center mx-auto">
+              Voir toutes les actualités
             </Link>
           </div>
         )}

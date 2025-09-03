@@ -1,0 +1,229 @@
+.our-values-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Style horizontal pour les cartes */
+.value-card-horizontal {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 193, 7, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.value-card-horizontal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+}
+
+.value-card-horizontal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon-container-horizontal {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.value-card-horizontal:hover .value-icon-container-horizontal {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.value-icon {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.value-content-horizontal {
+  flex: 1;
+}
+
+.value-title-horizontal {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.value-description-horizontal {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.values-commitment {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  padding: 40px;
+  border-radius: 15px;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.commitment-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffc107;
+}
+
+.commitment-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+/* Animation pour l'apparition des cartes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.value-card-horizontal {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.value-card-horizontal:nth-child(1) { animation-delay: 0.1s; }
+.value-card-horizontal:nth-child(2) { animation-delay: 0.2s; }
+.value-card-horizontal:nth-child(3) { animation-delay: 0.3s; }
+.value-card-horizontal:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .value-card-horizontal {
+    padding: 25px;
+  }
+  
+  .value-icon-container-horizontal {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  
+  .value-icon {
+    font-size: 1.6rem;
+  }
+  
+  .value-title-horizontal {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-values-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .value-card-horizontal {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .value-icon-container-horizontal {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .value-icon {
+    font-size: 1.5rem;
+  }
+  
+  .value-title-horizontal {
+    font-size: 1.2rem;
+  }
+  
+  .values-commitment {
+    padding: 30px 25px;
+  }
+  
+  .commitment-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .value-card-horizontal {
+    padding: 20px 15px;
+  }
+  
+  .value-icon-container-horizontal {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .value-icon {
+    font-size: 1.3rem;
+  }
+  
+  .values-commitment {
+    padding: 25px 20px;
+  }
+}

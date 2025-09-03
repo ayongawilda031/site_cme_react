@@ -12,21 +12,21 @@ import '../styles/Expertises.css'
 
 export const expertises = [
   {
-    image: '/assets/img/headercme.jpg', 
+    image: '/assets/img/droit_public.jpg', 
     title: 'Droit Public et Institutions',
     description: "Nous traitons également l'ensemble des questions de Droit Public générale, tant pour les entités de Droit public que pour les Entités de Droit Privé ayant des intérêts publics.",
     icon: <FaBuilding size={35} />,
     link: '/expertises/droit-public-institutions'
   },
   {
-    image: '/assets/img/headercme.jpg', 
+    image: '/assets/img/droit_penal.jpg', 
     title: 'Droit Pénal des Affaires',
     description: 'Défense et conseil en matière de litiges pénaux liés aux activités commerciales et financières.',
     icon: <FaGavel size={35} />,
     link: '/expertises/droit-penal-affaires'
   },
   {
-    image: '/assets/img/headercme.jpg',
+    image: '/assets/img/droit_travail.jpg',
     title: 'Droit du Travail et Social',
     description: 'Accompagnement dans la gestion des relations de travail, des litiges individuels et collectifs.',
     icon: <FaUserTie size={35} />,
@@ -40,7 +40,7 @@ export const expertises = [
     link: '/expertises/droit-fiscal-douanier'
   },
   {
-    image: '/assets/img/headercme.jpg',
+    image: '/assets/img/droit_société.jpg',
     title: 'Droit des Sociétés et Commercial',
     description: 'Création et gestion de sociétés, fusions-acquisitions et conseil en opérations commerciales.',
     icon: <FaBalanceScale size={35} />,

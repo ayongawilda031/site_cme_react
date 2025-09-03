@@ -17,7 +17,7 @@ const expertiseData = {
     title: 'Droit Public et Institutions',
     description: "Nous traitons également l'ensemble des questions de Droit Public générale, tant pour les entités de Droit public que pour les Entités de Droit Privé ayant des intérêts publics.",
     longDescription: "Notre cabinet dispose d'une expertise reconnue en droit public et institutionnel. Nous accompagnons les collectivités territoriales, les établissements publics et les entreprises privées dans leurs relations avec l'administration. Notre équipe vous conseille sur les marchés publics, le droit administratif, le contentieux administratif et toutes les questions liées au droit public.",
-    image: '/assets/img/headercme.jpg',
+    image: '/assets/img/droit_public.jpg',
     icon: <FaBuilding size={35} />,
     features: [
       'Conseil en marchés publics et délégations de service public',

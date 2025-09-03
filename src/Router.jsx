@@ -8,6 +8,7 @@ import ServicesPage from './Pages/ServicesPage';
 import ExpertisesPage from './Pages/ExpertisesPage';
 import ServiceDetailPage from './Pages/ServiceDetailPage';
 import ExpertiseDetailPage from './Pages/ExpertiseDetailPage';
+import NewsDetailPage from './Pages/NewsDetailPage';
 
 
 
@@ -19,7 +20,8 @@ export default function Router() {
           <Route path="/aboutus" element={<AboutUsPage />} /> 
           <Route path="/services" element={<ServicesPage />} /> 
           <Route path="/expertises" element={<ExpertisesPage />} />
-          <Route path="/news" element={<NewsPage />} />  
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/news/:id" element={<NewsDetailPage />} /> 
           <Route path="/contact" element={<ContactPage />} /> 
           <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
           <Route path="/expertises/:expertiseId" element={<ExpertiseDetailPage />} />
