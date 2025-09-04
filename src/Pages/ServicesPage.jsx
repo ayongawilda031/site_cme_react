@@ -12,6 +12,7 @@ export default function Services() {
         description="Découvrez l'ensemble de nos services juridiques sur mesure, conçus pour répondre à tous vos besoins et défendre au mieux vos intérêts." 
       />
       <OurServices showHeader={false} servicesList={services} />
+
       <Footer />
     </>
   );

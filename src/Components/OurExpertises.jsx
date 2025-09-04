@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { 
   FaBuilding, 
@@ -14,48 +15,59 @@ export const expertises = [
   {
     image: '/assets/img/droit_public.jpg', 
     title: 'Droit Public et Institutions',
-    description: "Nous traitons également l'ensemble des questions de Droit Public générale, tant pour les entités de Droit public que pour les Entités de Droit Privé ayant des intérêts publics. Notre expertise couvre les marchés publics, le contentieux administratif et le droit des collectivités territoriales.",
+    description: "Conseil en droit public et marchés publics, contentieux administratif et collectivités territoriales.",
     icon: <FaBuilding size={35} />,
     link: '/expertises/droit-public-institutions'
   },
   {
     image: '/assets/img/droit_penal.jpg', 
     title: 'Droit Pénal des Affaires',
-    description: 'Défense et conseil en matière de litiges pénaux liés aux activités commerciales et financières. Nous intervenons dans les dossiers de corruption, blanchiment, abus de biens sociaux et délits économiques complexes.',
+    description: 'Défense et conseil pour litiges pénaux liés aux affaires et délits économiques.',
     icon: <FaGavel size={35} />,
     link: '/expertises/droit-penal-affaires'
   },
   {
     image: '/assets/img/droit_travail.jpg',
     title: 'Droit du Travail et Social',
-    description: 'Accompagnement dans la gestion des relations de travail, des litiges individuels et collectifs. Conseil en restructuration, négociation collective et défense devant les prud\'hommes.',
+    description: 'Accompagnement pour relations de travail, litiges et négociations collectives.',
     icon: <FaUserTie size={35} />,
     link: '/expertises/droit-travail-social'
   },
   {
-    image: '/assets/img/headercme.jpg',
+    image: '/assets/img/droit_douanier.jpg',
     title: 'Droit Fiscal et Douanier',
-    description: 'Optimisation fiscale et résolution des contentieux avec les administrations fiscales et douanières. Expertise en fiscalité nationale et internationale, conseil en stratégie fiscale et assistance en contrôle fiscal.',
+    description: 'Optimisation fiscale et résolution de contentieux avec administrations fiscales et douanières.',
     icon: <FaMoneyBillWave size={35} />,
     link: '/expertises/droit-fiscal-douanier'
   },
   {
     image: '/assets/img/droit_société.jpg',
     title: 'Droit des Sociétés et Commercial',
-    description: 'Création et gestion de sociétés, fusions-acquisitions et conseil en opérations commerciales. Accompagnement dans la vie sociale des entreprises et la gouvernance d\'entreprise.',
+    description: 'Création, gestion de sociétés et conseil en opérations commerciales.',
     icon: <FaBalanceScale size={35} />,
     link: '/expertises/droit-societes-commercial'
   },
   {
-    image: '/assets/img/headercme.jpg',
+    image: '/assets/img/droit_assurance.jpg',
     title: 'Droit des Assurances',
-    description: "Assistance dans la gestion des sinistres et des litiges relatifs aux contrats d'assurance. Expertise en indemnisation, contentieux assurance et défense des droits des assurés et professionnels.",
+    description: 'Assistance dans la gestion des sinistres et contentieux assurance.',
     icon: <FaShieldAlt size={35} />,
     link: '/expertises/droit-assurances'
   },
 ];
 
+
 export default function OurExpertises({ isHomePage = false }) {
+
+  const displayedExpertises = useMemo(() => {
+    if (isHomePage) {
+      return [...expertises]
+        .sort(() => 0.5 - Math.random()) 
+        .slice(0, 3); 
+    }
+    return expertises;
+  }, [isHomePage]); 
+
   return (
     <section>
       <div className="container py-5 text-center">
@@ -69,7 +81,7 @@ export default function OurExpertises({ isHomePage = false }) {
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3 mx-auto">
-              {expertises.map((expertise, index) => (
+              {displayedExpertises.map((expertise, index) => (
                 <div key={index} className="col d-flex">
                   <Link to={expertise.link} className="text-decoration-none d-flex w-100">
                     <div className="card expertise-card border-0 w-100 d-flex flex-column">
@@ -79,7 +91,9 @@ export default function OurExpertises({ isHomePage = false }) {
                       </div>
                       <div className="card-body text-center text-sm-start p-4 d-flex flex-column">
                         <h5 className="fw-bold text-dark mb-3">{expertise.title}</h5>
-                        <p className="text-muted mb-4 text-justify flex-grow-1 expertise-description">{expertise.description}</p>
+                        <p className="text-muted mb-4 text-justify flex-grow-1 expertise-description">
+                          {expertise.description}
+                        </p>
                         
                         <div className="mt-auto">
                           <div className="d-flex align-items-center text-primary">

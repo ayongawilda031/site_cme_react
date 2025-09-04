@@ -12,7 +12,7 @@ export default function AboutUsPage() {
       <NavBar />
       <HeaderBanner 
         title="À propos de nous" 
-        description="Découvrez notre cabinet d'avocats, nos valeurs et notre équipe d'experts juridiques dévoués à votre réussite." 
+        description="Découvrez notre cabinet d'avocats, nos valeurs et nos missions." 
       />
       <CabinetSection />
       <OurMissions />

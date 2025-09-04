@@ -41,7 +41,7 @@ export default function HeaderBanner({ title, description }) {
                       const isLast = index === pathnames.length - 1;
                       const pageName = value.charAt(0).toUpperCase() + value.slice(1);
                       
-                      // Noms plus conviviaux pour certaines routes
+                   
                       let displayName = pageName;
                       if (value === 'services') displayName = 'Services';
                       if (value === 'expertises') displayName = 'Expertises';

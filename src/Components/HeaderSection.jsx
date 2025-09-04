@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 export default function HeaderSection() {
   return (
-    <header className="header-with-bg py-8 mt-4">
+    <header className="header-with-bg py-8 mt-2">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-10 col-lg-8 text-center">
-            <h1 className="mb-4 heading">
+            <h1 className="mb-5 heading">
               <span className="d-inline fs-1 fw-bold text-warning">
                 Cabinet Maître ESSINGONE
               </span>

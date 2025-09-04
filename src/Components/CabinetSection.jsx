@@ -38,9 +38,9 @@ export default function CabinetSection() {
               <div className="col-lg-6 col-md-12 d-flex justify-content-center">
                 <div className="bg-gradient rounded-3 p-3">
                   <img 
-                    src="/assets/img/projects/project.jpeg"
+                    src="/assets/img/avocat_header.jpg"
                     alt="Cabinet"
-                    className="img-fluid rounded-2 shadow-sm w-75"
+                    className="img-fluid rounded-2 shadow-sm w-100"
                   />
                 </div>
               </div>

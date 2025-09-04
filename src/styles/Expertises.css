@@ -3,23 +3,24 @@
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombre subtile par défaut */
 }
 
 .expertise-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Ombre renforcée au hover */
 }
 
 .expertise-img {
-  height: 180px;
+  height: 170px;
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
 .expertise-step-circle {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
   position: absolute;
   top: 150px;
@@ -35,17 +36,22 @@
 }
 
 .expertise-description {
-  min-height: 120px;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
+  display: -webkit-box;       
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;      
+  
+  display: box;               
+  box-orient: vertical;
+  line-clamp: 3;              
+
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.5;
+  line-height: 1.4;
   flex-grow: 1;
 }
 
-/* Assurer une hauteur uniforme pour tous les titres */
+
+
 .card-body h5 {
   min-height: 60px;
   display: flex;
@@ -53,7 +59,7 @@
   justify-content: flex-start;
 }
 
-/* Style pour le lien "En savoir plus" */
+
 .card-body .mt-auto {
   margin-top: auto;
   padding-top: 1rem;
@@ -69,7 +75,7 @@
   transform: translateX(5px);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .expertise-img {
     height: 160px;
@@ -87,10 +93,7 @@
     height: 25px;
   }
   
-  .expertise-description {
-    min-height: 100px;
-    -webkit-line-clamp: 4;
-  }
+
   
   .card-body h5 {
     min-height: 50px;
@@ -118,11 +121,7 @@
     height: 20px;
   }
   
-  .expertise-description {
-    min-height: auto;
-    -webkit-line-clamp: 3;
-  }
-  
+
   .card-body {
     padding: 1.5rem;
   }
@@ -133,9 +132,5 @@
   }
 }
 
-/* Pour les écrans très larges */
-@media (min-width: 1200px) {
-  .expertise-description {
-    min-height: 100px;
-  }
-}
+
+
